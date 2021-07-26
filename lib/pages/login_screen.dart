@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
-
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -94,24 +94,54 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         child: Text('Login'),
                       ),
+                      MaterialButton(
+                        padding: EdgeInsets.zero,
+                        onPressed: () {},
+                        child: Image(
+                          image: AssetImage('assets/signin.png'),
+                          width: 205,
+                        ),
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      // --- Material Button ---
+                      Container(
+                        width: 200,
+                        child: ElevatedButton.icon(
+                          style: ElevatedButton.styleFrom(
+                            minimumSize: Size(double.maxFinite, 40),
+                          ),
+                          onPressed: () {},
+                          icon: Image(
+                            image: AssetImage('assets/mail.png'),
+                            height: 38,
+                            width: 38,
+                          ),
+                          label: Text(
+                            'Sign in with Email',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+                            textScaleFactor: 1.1,
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
               ),
-              MaterialButton(
-                padding: EdgeInsets.zero,
-                onPressed: () {},
-                child: Image(
-                  image: AssetImage('assets/signin.png'),
-                  width: 200.0,
-                ),
-              ),
               SizedBox(
-                height: 10,
+                height: 5,
               ),
               InkWell(
                 onTap: () {},
-                child: Text('Sign up Here'),
+                child: Text(
+                  'Sign up Here',
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold, color: Colors.blue),
+                  textScaleFactor: 1.1,
+                ),
               )
             ],
           ),
@@ -120,3 +150,38 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 }
+
+
+// MaterialButton(
+                      //   height: 45,
+                      //   color: Colors.blue[800],
+                      //   onPressed: () {},
+                      //   child: Row(
+                      //     mainAxisAlignment: MainAxisAlignment.start,
+                      //     children: [
+                      //       Container(
+                      //         padding: EdgeInsets.all(10),
+                      //         height: 44,
+                      //         width: 44,
+                      //         decoration: BoxDecoration(
+                      //           borderRadius:
+                      //               BorderRadius.all(Radius.circular(3)),
+                      //           color: Colors.white,
+                      //           image: DecorationImage(
+                      //               image: AssetImage('assets/google.png'),
+                      //               fit: BoxFit.cover),
+                      //         ),
+                      //       ),
+                      //       SizedBox(
+                      //         width: 20,
+                      //       ),
+                      //       Text(
+                      //         'Sign in with Google',
+                      //         style: TextStyle(
+                      //             fontWeight: FontWeight.bold,
+                      //             color: Colors.white),
+                      //         textScaleFactor: 1.2,
+                      //       ),
+                      //     ],
+                      //   ),
+                      // ),
